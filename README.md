@@ -5,7 +5,7 @@ Build TF from source as shared lib on Ubuntu Linux
 
 1. Install bazel
 
-2. Clone TF from repository and build it
+2. Clone TF from repository
 
 ```
 git clone https://github.com/tensorflow/tensorflow.git
@@ -29,13 +29,12 @@ bazel build -c opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-mfpmath=both 
 4. Download and build protocol buffers
 IMPORTANT: open tensorflow/workspace.bzl and check for protocol buffer version used in TF.
 Download and build the same version. It will conflict in other case.
-Install protobuf using checkinstall
-call 
+Install protobuf using checkinstall. Call
 ```
 sudo ldconfig
 ```
 
-to set update library cache
+to set update the library cache
 
 5. Build Eigen
 6. Build absl lib
